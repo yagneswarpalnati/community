@@ -1,4 +1,0 @@
-{
-  "buildCommand": "npx nx build app1",
-  "outputDirectory": "dist/app1"
-}
