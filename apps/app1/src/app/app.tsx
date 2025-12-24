@@ -6,6 +6,7 @@ export function App() {
   return (
     <div>
       <Shared title={'app1'}/>
+      <h1>Test</h1>
     </div>
   );
 }
