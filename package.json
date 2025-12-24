@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev:app1":"nx serve app1",
-    "dev:app2":"nx serve app2"
+    "dev:app1": "nx serve app1",
+    "dev:app2": "nx serve app2"
   },
   "private": true,
   "dependencies": {
@@ -24,7 +24,7 @@
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
     "@types/node": "^20.0.0",
-    "@types/react": "^19.0.0",
+    "@types/react": "^19.2.7",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.2.0",
     "@vitest/ui": "^4.0.0",
