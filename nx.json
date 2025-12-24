@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "master",
+  "useNxCloud": false,
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -11,7 +12,6 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudId": "6937c244acfc277d168487b7",
   "plugins": [
     {
       "plugin": "@nx/vite/plugin",
@@ -27,23 +27,5 @@
         "watchDepsTargetName": "watch-deps"
       }
     }
-  ],
-  "generators": {
-    "@nx/react": {
-      "application": {
-        "babel": true,
-        "style": "css",
-        "linter": "none",
-        "bundler": "vite"
-      },
-      "component": {
-        "style": "css"
-      },
-      "library": {
-        "style": "css",
-        "linter": "none",
-        "unitTestRunner": "none"
-      }
-    }
-  }
+  ]
 }
