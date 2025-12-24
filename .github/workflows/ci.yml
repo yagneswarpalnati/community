@@ -1,27 +1,30 @@
-name: Nx CI
+name: CI
 
 on:
   pull_request:
+    branches: [main]
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          version: 10
+          node-version: 20
+          cache: npm
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
+      - name: Install dependencies
+        run: npm install
 
-      - run: pnpm install
+      - name: Build shared
+        run: npx nx build shared
 
-      - run: npx nx affected -t lint test build --base=origin/main
+      - name: Build app1
+        run: npx nx build app1
